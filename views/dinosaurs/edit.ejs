@@ -1,19 +1,19 @@
-<form action="/prehistoricCreatures" method="post">
+<form action="/dinosaurs/<%=dinoId%>/?_method=PUT" method="POST">
     <!-- method is http verb -->
    <!-- info we need to get to do it -->
    <div>
-   <label for="creatureType">Type:</label>
+   <label for="dinosaurType">Type:</label>
    <!-- sync upthe id label with input -->
-   <input type="text" name="type" id="creatureType">
+   <input type="text" name="type" id="dinosaurType" value="<%= dino.type %> ">
 </div>
 <div>
      <!-- info we need to get to do it -->
-     <label for="creatureName">Name</label>
+     <label for="dinosaurName">Name:</label>
      <!-- sync upthe id label with input -->
-     <input type="text" name="type" id="creatureName">
+     <input type="text" name="name" id="dinosaurName" value="<%= dino.name %> ">
 <!-- action will be url for the post equest adding dinasours -->
    <!-- when submit to post data requested -->
    <!-- attributes important and in the course notes -->
 </div>
-   <button type="submit">Add a new Prehistoric Creature!</button>
+   <button type="submit">Update this Dino!</button>
 </form>
